@@ -1,7 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-
+import {useEffect} from 'react';
+import axios from 'axios'
 function App() {
+  useEffect( () => {
+        axios.get("http://api.weatherapi.com/v1/forecast.json?key=a725b42ab3ce4d768bb15630222304&q=london&days=2")
+        .then((res) => console.log(res))
+        .catch(err => console.log(err))
+        
+}, []);
   return (
     <div className="App">
       <header className="App-header">
