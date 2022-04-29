@@ -4,7 +4,7 @@ import {useEffect} from 'react';
 import axios from 'axios'
 function App() {
   useEffect( () => {
-        axios.get("http://api.weatherapi.com/v1/forecast.json?key=a725b42ab3ce4d768bb15630222304&q=london&days=2")
+        axios.get('https://api.themoviedb.org/3/movie/popular?api_key=9270421e43cc32ed6056cad8de3c2c67&language=en-US&page=1')
         .then((res) => console.log(res))
         .catch(err => console.log(err))
         
